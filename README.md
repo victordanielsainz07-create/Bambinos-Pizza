@@ -119,4 +119,4 @@ docker compose down
 
 ## 👤 Autor
 
-_(Nombre del estudiante)_ — Tecnológico Superior de Jalisco, campus La Huerta.
+_Victor Daniel Sainz Preciado_ — Tecnológico Superior de Jalisco, campus La Huerta.
