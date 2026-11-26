@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/images/LOGO-PIZZERIA.png"/>
+  <title>Reservar Evento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/reservar.css" />
+</head>
+<body>
+
+  <nav class="navbar scrolled" id="navbar">
+    <a href="../index.html" class="nav-brand">
+      <img src="../assets/images/LOGO-PIZZA-BLANCO.jpeg" alt="Bambinos Pizza" class="brand-logo" />
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html"           class="nav-link">Inicio</a></li>
+      <li><a href="menu.html"               class="nav-link">Menú</a></li>
+      <li><a href="../index.html#servicios"  class="nav-link">Servicios</a></li>
+      <li><a href="../index.html#ubicacion"  class="nav-link">Ubicación</a></li>
+      <li><a href="tel:+523153554431"          class="nav-link nav-cta">📞 Llamar</a></li>
+    </ul>
+  </nav>
+
+  <main class="reservar-main">
+    <div class="container reservar-inner" style="grid-template-columns:1fr; max-width:680px;">
+
+      <div class="reservar-form-wrap">
+        <div class="form-card" style="text-align:center; padding:3.5rem 2.5rem;">
+
+          <div style="font-size:3.5rem; margin-bottom:1rem;">📞</div>
+
+          <h1 class="section-title" style="font-size:2.25rem; margin-bottom:0.75rem;">
+            Reserva tu <em>Evento</em>
+          </h1>
+          <p style="color:var(--clr-text-muted); margin-bottom:2.5rem; max-width:420px; margin-inline:auto;">
+            Las reservaciones se realizan exclusivamente por llamada telefónica.
+            Nuestro equipo te atenderá y confirmará todos los detalles de tu evento.
+          </p>
+
+          <!-- Tarjetas de teléfono -->
+          <div style="display:flex; flex-direction:column; gap:1rem; max-width:380px; margin:0 auto 2.5rem;">
+
+            <a href="tel:+523153554431" class="res-feat" style="justify-content:center; text-decoration:none; gap:1.25rem;">
+              <span style="font-size:1.75rem;">📞</span>
+              <div style="text-align:left;">
+                <strong>315 355 4431</strong>
+                <p style="margin:0; font-size:0.82rem;">Toca para llamar</p>
+              </div>
+            </a>
+
+            <a href="tel:+523153553227" class="res-feat" style="justify-content:center; text-decoration:none; gap:1.25rem;">
+              <span style="font-size:1.75rem;">📞</span>
+              <div style="text-align:left;">
+                <strong>315 355 3227</strong>
+                <p style="margin:0; font-size:0.82rem;">Toca para llamar</p>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Info adicional -->
+          <div style="border-top:2px solid var(--clr-border); padding-top:1.75rem; display:flex; flex-direction:column; gap:0.5rem;">
+            <p style="font-family:var(--font-ui); font-size:0.82rem; color:var(--clr-text-muted);">🕐 Horario de atención</p>
+            <p style="font-family:var(--font-ui); font-size:0.9rem; font-weight:500; color:var(--clr-text-mid);">
+              Martes – Sábado: 4:00 pm – 11:30 pm<br>
+              Domingo: 12:00 pm – 11:30 pm
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/images/LOGO-PIZZERIA.png" alt="Bambinos Pizza" class="brand-logo" />
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="menu.html">Menú</a>
+        <a href="../index.html#servicios">Servicios</a>
+        <a href="../index.html#ubicacion">Ubicación</a>
+      </nav>
+      <p class="footer-copy"><strong>© 2026 BAMBINOS PIZZA. Todos los derechos reservados.</strong></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260622b"></script>
+</body>
+</html>

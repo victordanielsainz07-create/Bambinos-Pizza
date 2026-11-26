@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/images/LOGO-PIZZERIA.png"/>
+  <title>Menú</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/menu.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="../index.html" class="nav-brand">
+      <img src="../assets/images/LOGO-PIZZA-BLANCO.jpeg" alt="Bambinos Pizza" class="brand-logo" />
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html"          class="nav-link">Inicio</a></li>
+      <li><a href="#"                      class="nav-link active">Menú</a></li>
+      <li><a href="../index.html#servicios" class="nav-link">Servicios</a></li>
+      <li><a href="../index.html#ubicacion" class="nav-link">Ubicación</a></li>
+      <li><a href="tel:+523153554431"          class="nav-link nav-cta">📞 Llamar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO MENÚ -->
+  <header class="menu-hero">
+    <div class="hero-bg">
+      <div class="fire-orb fire-orb--1"></div>
+      <div class="grain-overlay"></div>
+    </div>
+    <div class="menu-hero__content">
+      <p class="section-eyebrow">Lo mejor de la casa</p>
+      <h1 class="hero-title">Nuestro <em class="title-italic">Menú</em></h1>
+      <p class="hero-desc">Ingredientes frescos, recetas con alma. Encuentra tu combinación perfecta.</p>
+    </div>
+  </header>
+
+  <!-- FILTER TABS -->
+  <div class="menu-tabs-wrap">
+    <div class="container">
+      <div class="menu-tabs" role="tablist">
+        <button class="tab-btn active" data-filter="all"          role="tab">Todo</button>
+        <button class="tab-btn"        data-filter="pizzas"       role="tab">🍕 Pizzas</button>
+        <button class="tab-btn"        data-filter="hamburguesas" role="tab">🍔 Hamburguesas</button>
+        <button class="tab-btn"        data-filter="alitas"       role="tab">🍗 Alitas</button>
+        <button class="tab-btn"        data-filter="quesadillas"  role="tab">🫔 Quesadillas</button>
+        <button class="tab-btn"        data-filter="bebidas"      role="tab">🥤 Bebidas</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU CONTENT -->
+  <main class="menu-main">
+    <div class="container">
+
+      <!-- PIZZAS -->
+      <section class="menu-section" data-category="pizzas" id="pizzas">
+        <div class="menu-section-header">
+          <span class="section-emoji">🍕</span>
+          <div>
+            <h2>Pizzas</h2>
+            <p><strong> Masa madre, horneadas al momento. Disponibles en 5 tamaños.</strong></p>
+          </div>
+          <div class="size-legend">
+            <span>Personal</span><span>Chica</span><span>Mediana</span><span>Grande</span><span>Mega</span>
+          </div>
+        </div>
+        <div class="menu-grid" id="pizzas-grid"></div>
+      </section>
+
+      <!-- HAMBURGUESAS -->
+      <section class="menu-section" data-category="hamburguesas" id="hamburguesas">
+        <div class="menu-section-header">
+          <span class="section-emoji">🍔</span>
+          <div>
+            <h2>Hamburguesas</h2>
+            <p><strong>Carne fresca, papas doradas. Estilo gourmet sin complicaciones.</strong></p>
+          </div>
+        </div>
+        <div class="menu-grid" id="burger-grid"></div>
+      </section>
+
+      <!-- ALITAS -->
+      <section class="menu-section" data-category="alitas" id="alitas">
+        <div class="menu-section-header">
+          <span class="section-emoji">🍗</span>
+          <div>
+            <h2>Alitas</h2>
+            <p><strong>Orden de 12 piezas. Elige tu salsa favorita.</strong></p>
+          </div>
+        </div>
+        <div class="menu-grid" id="alitas-grid"></div>
+      </section>
+
+      <!-- QUESADILLAS -->
+      <section class="menu-section" data-category="quesadillas" id="quesadillas">
+        <div class="menu-section-header">
+          <span class="section-emoji">🫔</span>
+          <div>
+            <h2>Quesadillas</h2>
+            <p><strong>Tortilla artesanal, queso Oaxaca derretido. Rellenos a elegir.</strong></p>
+          </div>
+        </div>
+        <div class="menu-grid" id="quesadilla-grid"></div>
+      </section>
+
+      <!-- BEBIDAS -->
+      <section class="menu-section" data-category="bebidas" id="bebidas">
+        <div class="menu-section-header">
+          <span class="section-emoji">🥤</span>
+          <div>
+            <h2>Bebidas</h2>
+            <p><strong>Frescas, naturales y para todos los gustos.</strong></p>
+          </div>
+        </div>
+        <div class="menu-grid" id="bebidas-grid"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- CTA -->
+  <section class="menu-cta">
+    <div class="container">
+      <h2 class="section-title">¿Ya decidiste?</h2>
+      <p>Llámanos y te preparamos tu pedido.</p>
+      <div class="contacto-actions">
+        <a href="tel:+523153554431" class="btn btn--primary">📞 315 355 4431</a>
+        <a href="tel:+523153553227" class="btn btn--outline-dark">📞 315 355 3227</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="../assets/images/LOGO-PIZZERIA.png" alt="Bambinos Pizza" class="brand-logo" />
+      </div>
+      <nav class="footer-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="#">Menú</a>
+        <a href="../index.html#servicios">Servicios</a>
+        <a href="../index.html#ubicacion">Ubicación</a>
+      </nav>
+      <p class="footer-copy"><strong> © 2026 BAMBINOS PIZZA. Todos los derechos reservados.</strong></p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=20260622b"></script>
+  <script src="../js/menu.js?v=20260622"></script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAMBINOS PIZZA — Pizzería Artesanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (blanca siempre) -->
+  <nav class="navbar" id="navbar">
+    <a href="#inicio" class="nav-brand">
+      <img src="assets/images/LOGO-PIZZA-BLANCO.jpeg" alt="Bambinos Pizza" class="brand-logo" />
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio"             class="nav-link">Inicio</a></li>
+      <li><a href="pages/menu.html"     class="nav-link">Menú</a></li>
+      <li><a href="#servicios"          class="nav-link">Servicios</a></li>
+      <li><a href="#ubicacion"          class="nav-link">Ubicación</a></li>
+      <li><a href="pages/reservar.html" class="nav-link nav-cta">Reservar</a></li>
+    </ul>
+  </nav>
+
+  <!-- ① HERO — FONDO ROJO -->
+  <section class="hero" id="inicio">
+    <div class="hero-visual reveal-right">
+      <img src="assets/images/LOGO-PIZZERIA.png" alt="Bambinos Pizza" class="hero-logo-img" />
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">— Artesanal · Familiar · Apasionado —</p>
+      <h1 class="hero-title reveal">
+        <span class="title-line">El lugar de las</span>
+        <span class="title-line title-italic">Mejores</span>
+        <span class="title-line">PIZZAS</span>
+      </h1>
+      <p class="hero-desc reveal"><strong>Masa madre, ingredientes frescos y el sabor que solo existe cuando alguien pone el corazón en cada pizza.</strong></p>
+      <div class="hero-actions reveal">
+        <a href="pages/menu.html" class="btn btn--primary">Ver el Menú</a>
+        <a href="#servicios"      class="btn btn--ghost">Nuestros Servicios</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Descubre más</span>
+    </div>
+  </section>
+
+  <!-- ② ESPECIALIDADES — FONDO BLANCO -->
+  <section class="featured" id="menu-preview">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Lo más pedido</p>
+        <h2 class="section-title">Nuestras <em>Especialidades</em></h2>
+      </div>
+      <div class="featured-grid">
+        <article class="food-card food-card--hero">
+          <div class="food-card__img-wrap">
+            <img src="assets/images/PIZZA2.jpeg" alt="Pizza Hawaiana" />
+          </div>
+          <div class="food-card__body">
+            <span class="food-tag">La Estrella</span>
+            <h3>Hawaiana</h3>
+            <p>Jamón y Piña.</p>
+            <div class="food-sizes">
+              <button class="size-btn active" data-size="personal">Personal</button>
+              <button class="size-btn" data-size="chica">Chica</button>
+              <button class="size-btn" data-size="mediana">Mediana</button>
+              <button class="size-btn" data-size="grande">Grande</button>
+              <button class="size-btn" data-size="mega">Mega</button>
+            </div>
+            <div class="food-price" id="pizza-price">$110</div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div class="food-card__img-wrap">
+            <img src="assets/images/Buerger.jpeg" alt="Hamburguesa de Res" />
+          </div>
+          <div class="food-card__body">
+            <span class="food-tag">Gourmet</span>
+            <h3>Hamburguesa Clásica de Res</h3>
+            <p>Carne de res, queso amarillo, lechuga, jitomate, cebolla y ketchup. Con papas.</p>
+            <div class="food-price">$100</div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div class="food-card__img-wrap">
+            <img src="assets/images/Alitas.jpeg" alt="Alitas Búfalo" /> <!-- falta la imagen -->
+          </div>
+          <div class="food-card__body">
+            <span class="food-tag">Imperdible</span>
+            <h3>Alitas Búfalo</h3>
+            <p>Orden de 8 piezas bañadas en salsa búffalo casera. Incluye ranch y apio.</p>
+            <div class="food-price">$120</div>
+          </div>
+        </article>
+        <article class="food-card">
+          <div class="food-card__img-wrap">
+            <img src="assets/images/Quesadilla.jpeg" alt="Quesadilla de Arrachera" />
+          </div>
+          <div class="food-card__body">
+            <span class="food-tag">Favorita</span>
+            <h3>Quesadilla de Arrachera</h3>
+            <p>Carne de Arrachera y Queso manchego.</p>
+            <div class="food-price">$80</div>
+          </div>
+        </article>
+      </div>
+      <div class="featured-cta">
+        <a href="pages/menu.html" class="btn btn--primary">Ver Menú Completo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ SERVICIOS — FONDO ROJO -->
+  <section class="servicios" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Lo que ofrecemos</p>
+        <h2 class="section-title">Más que una pizzería,<br><em>una experiencia</em></h2>
+      </div>
+      <div class="servicios-grid">
+        <div class="servicio-card"><img src="./assets/images/SER-DOM.png"><h3>Servicio a Domicilio</h3><p><strong>Llevamos tu pedido hasta la puerta de tu casa, caliente y a tiempo.</strong></p></div>
+        <div class="servicio-card"><img src="./assets/images/SRVICIO-A-MESA.png"><h3>Servicio a Mesa</h3><p><strong>Atención personalizada en nuestro salón. Siéntate, relájate y disfruta.</strong></p></div>
+        <div class="servicio-card"><img src="./assets/images/BANQUETES.png"><h3>Eventos y Banquetes</h3><p><strong>Patio exclusivo para fiestas, reuniones corporativas y celebraciones.</strong></p></div>
+        <div class="servicio-card"><img src="./assets/images/AREA-INF.png"><h3>Área Infantil</h3><p><strong>Zona de juegos para que los pequeños se diviertan mientras comes.</strong></p></div>
+        <div class="servicio-card"><img src="./assets/images/E.png"><h3>Estacionamiento</h3><p><strong>Llega sin preocupaciones. Estacionamiento propio y seguro.</strong></p></div>
+        <div class="servicio-card"><img src="./assets/images/TERMINAL.png" alt="Terminal"><h3>Efectivo y Terminal</h3><p><strong>Paga como prefieras: efectivo, débito o crédito.</strong></p></div>
+        <div class="servicio-card"><img src="./assets/images/WIFIZONE.png" alt="Wi-Fi-Zone"><h3>Wi-Fi Zone</h3><p><strong> Internet gratis para tu entretenimiento durante tu visita.</strong></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ STORY — FONDO OSCURO -->
+  <section class="story">
+    <div class="container story-inner">
+      <div class="story-visual">
+        <div class="story-circle">
+          <span class="story-big-emoji">🔥</span>
+        </div>
+        <div class="story-stat-card stat-1">
+          <span class="stat-num">13+</span>
+          <span class="stat-label">Años de Sabor</span>
+        </div>
+        <div class="story-stat-card stat-2">
+          <span class="stat-num">4.9★</span>
+          <span class="stat-label">Calificación</span>
+        </div>
+      </div>
+      <div class="story-text">
+        <p class="section-eyebrow">Nuestra historia</p>
+        <h2 class="section-title">Nacimos del amor<br><em>por la buena comida</em></h2>
+        <p><strong>Bambinos Pizza nació de una familia que creía que comer bien no tiene que ser complicado. Solo auténtico. Cada pizza sale de nuestro horno con masa elaborada a mano y los mejores ingredientes.</strong></p>
+        <p><strong>Hoy somos mucho más que pizzería: somos el lugar donde las familias se reúnen, donde los amigos celebran y donde cada bocado cuenta una historia.</strong></p>
+        <a href="#contacto" class="btn btn--historia">Visítanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤ UBICACIÓN — FONDO ROJO -->
+  <section class="ubicacion" id="ubicacion">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">¿Dónde estamos?</p>
+        <h2 class="section-title">Encuéntranos</h2>
+      </div>
+      <div class="ubicacion-grid">
+        <div class="ubicacion-info">
+          <div class="info-block">
+            <span class="info-icon">📍</span>
+            <div>
+              <strong>Dirección</strong>
+              <p><strong> Av. Ocampo #220, Col. Centro<br>Cihuatlán, Jalisco</strong></p>
+            </div>
+          </div>
+          <div class="info-block">
+            <span class="info-icon">🕐</span>
+            <div>
+              <strong>Horario</strong>
+              <p><strong> Martes – Sábado: 4:00 pm – 11:30 pm<br>Domingo: 12:00 pm – 11:30 pm<br>Lunes: Descansamos</strong></p>
+            </div>
+          </div>
+          <div class="info-block">
+            <span class="info-icon">📞</span>
+            <div>
+              <strong>Teléfono / WhatsApp</strong>
+              <p> <strong>
+                <a href="tel:+523153554431">315 355 4431</a> &nbsp;/&nbsp;
+                <a href="tel:+523153553227">315 355 3227</a>
+              </strong></p>
+            </div>
+          </div>
+          <div class="info-block">
+            <span class="info-icon">📱</span>
+            <div>
+              <strong>Redes Sociales</strong>
+              <p><strong>Síguenos como @BambinosPizza</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="map-croquis">
+          <div id="mapa-bambinos"></div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ CONTACTO — FONDO BLANCO -->
+  <section class="contacto" id="contacto">
+    <div class="container contacto-inner">
+      <h2 class="section-title">¿Listo para<br><em>pedir?</em></h2>
+      <p><strong> Llámanos y haz tu reservación aquí!</strong></p>
+      <div class="contacto-actions">
+        <a href="tel:+523153554431"          class="btn btn--primary">📞 Llamar</a>
+        <a href="pages/reservar.html"        class="btn btn--outline">📅 Reservar Evento</a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/share/18cQLXMcEi/" class="social-link" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/bmbns_pizza_cihuatlan_oficial?igsh=MW9ycWl4Z3ltbjhvNg==" class="social-link" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER — OSCURO -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/LOGO-PIZZERIA.png" alt="Bambinos Pizza" class="brand-logo" />
+      </div>
+      <nav class="footer-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="pages/menu.html">Menú</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="pages/reservar.html">Reservar</a>
+      </nav>
+      <p class="footer-copy"><strong> © 2026 BAMBINOS PIZZA · Cihuatlán, Jalisco · Todos los derechos reservados.</strong></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=20260622b"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function () {
+      const LAT = 19.235602, LNG = -104.564162;
+      const map = L.map('mapa-bambinos', { zoomControl: true, scrollWheelZoom: false })
+                   .setView([LAT, LNG], 17);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://openstreetmap.org" target="_blank">OpenStreetMap</a>',
+        maxZoom: 19,
+      }).addTo(map);
+      const icon = L.divIcon({
+        className: '',
+        html: '<div style="background:#c41a00;width:36px;height:36px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid white;box-shadow:0 3px 12px rgba(0,0,0,0.4)"></div>',
+        iconSize: [36, 36], iconAnchor: [18, 36], popupAnchor: [0, -40],
+      });
+      L.marker([LAT, LNG], { icon })
+        .addTo(map)
+        .bindPopup('<strong style="font-family:DM Sans,sans-serif">🍕 Bambinos Pizza</strong><br><span style="font-size:0.8rem">Av. Ocampo #220, Centro<br>Cihuatlán, Jalisco</span>')
+        .openPopup();
+    })();
+  </script>
+</body>
+</html>
